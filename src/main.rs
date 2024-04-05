@@ -339,6 +339,8 @@ impl eframe::App for EnigmaApp {
     }
 }
 
+// native app
+#[cfg(not(target_arch = "wasm32"))]
 fn main() {
     let options = eframe::NativeOptions::default();
     let _ = eframe::run_native(
@@ -346,4 +348,20 @@ fn main() {
         options,
         Box::new(|_cc| Box::new(EnigmaApp::new())),
     );
+}
+
+// When compiling to web using trunk:
+#[cfg(target_arch = "wasm32")]
+fn main() {
+    let options = eframe::WebOptions::default();
+    wasm_bindgen_futures::spawn_local(async {
+        eframe::WebRunner::new()
+            .start(
+                "the_canvas_id", // hardcode it
+                options,
+                Box::new(|_cc| Box::new(EnigmaApp::new())),
+            )
+            .await
+            .expect("failed to start eframe");
+    });
 }
