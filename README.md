@@ -1,6 +1,6 @@
 # Enigma Machine Simulator 
 
-The Enigma Machine Simulator is a rust implementation of the Enigma machine used during World War II for encrypting and decrypting messages. This implementation aims to accurately represent the rotors, plugboard, and reflector systems of the historical Enigma machine..
+The Enigma Machine Simulator is a rust implementation of the Enigma machine used during World War II for encrypting and decrypting messages. This implementation aims to accurately represent the rotors, plugboard, and reflector systems of the historical Enigma machine. You can try it out on the github pages [site](https://rbnyng.github.io/enigma_machine/) for this project. 
 
 ## Features
 
