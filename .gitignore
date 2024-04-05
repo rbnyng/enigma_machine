@@ -1,0 +1,15 @@
+target/debug/
+target/release/.fingerprint/
+target/release/build/
+target/release/deps/
+target/release/examples/
+target/release/incremental/
+target/release/*.d
+target/release/*.pdb
+target/.rustc_info.json
+Cargo.lock
+target/CACHEDIR.TAG
+target/release/.cargo-lock
+target/wasm-bindgen
+target/wasm32-unknown-unknown
+target/wasm-opt
